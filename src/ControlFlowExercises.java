@@ -106,5 +106,7 @@ public class ControlFlowExercises {
             System.out.print("Do you want to continue? (Y/N): ");
             solution = userInput.next().charAt(0);
         } while (solution == 'Y' || solution == 'y');
+
+//        Testing secondary branch
     }
 }
