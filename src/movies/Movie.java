@@ -2,9 +2,13 @@ package movies;
 import java.util.Random;
 
 public class Movie {
+
+    private String name;
+    private String category;
+
     public static void main(String[] args) {
-        String[] adjectives = {"happy", "sad", "angry", "excited", "bored", "tired", "hungry", "thirsty", "cold", "hot"};
-        String[] nouns = {"dog", "cat", "bird", "fish", "lion", "tiger", "elephant", "giraffe", "monkey", "snake"};
+        String[] adjectives = {"happy", "sad", "faster", "gross", "bored", "lonely", "cool", "messy", "rigid", "awful", "mischievous"};
+        String[] nouns = {"mother", "father", "brother", "sister", "president", "girl", "boy", "shoe", "basketball", "Disneyland"};
 
         String randomAdjective = getRandom(adjectives);
         String randomNoun = getRandom(nouns);
@@ -17,4 +21,23 @@ public class Movie {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
     }
+
+    public Movie(String name, String category) {
+        this.name = name;
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }
