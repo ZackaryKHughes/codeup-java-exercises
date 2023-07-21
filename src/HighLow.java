@@ -10,7 +10,7 @@ public class HighLow {
         int guess;
         boolean win = false;
 
-        while (win == false) {
+        while (!win) {
             System.out.println("Guess a number between 1 and 100:");
             guess = input.nextInt();
             numberOfTries++;
@@ -19,11 +19,11 @@ public class HighLow {
                 win = true;
             } else if (guess < numberToGuess) {
                 System.out.println("Higher");
-            } else if (guess > numberToGuess) {
+            } else {
                 System.out.println("Lower");
             }
 
-            if (numberOfTries == 10 && win == false) {
+            if (numberOfTries == 10 && !win) {
                 System.out.println("You lose! The number was " + numberToGuess);
                 break;
             }
